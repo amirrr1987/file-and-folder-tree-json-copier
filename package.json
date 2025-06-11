@@ -1,8 +1,9 @@
 {
   "name": "file-and-folder-tree-json-copier",
   "displayName": "File and Folder Tree JSON Copier",
+  "publisher": "AmirMaghami",
   "description": "Generate and copy the directory structure of the current project as JSON.",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/amirrr1987/file-and-folder-tree-json-copier.git"
@@ -18,23 +19,33 @@
     "onCommand:file-tree-json.generateFromExplorer"
   ],
   "main": "./dist/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "file-tree-json.generateFromExplorer",
-        "title": "Copy Directory Tree as JSON"
-      }
-    ],
-    "menus": {
-      "explorer/context": [
-        {
-          "command": "file-tree-json.generateFromExplorer",
-          "when": "explorerResourceIsFolder || explorerResourceIsFile",
-          "group": "2_copy"
-        }
-      ]
+"contributes": {
+  "commands": [
+    {
+      "command": "file-tree-json.generateSimple",
+      "title": "Copy Directory Tree as Simple JSON"
+    },
+    {
+      "command": "file-tree-json.generateDetailed",
+      "title": "Copy Directory Tree as Detailed JSON"
     }
-  },
+  ],
+  "menus": {
+    "explorer/context": [
+      {
+        "command": "file-tree-json.generateSimple",
+        "when": "explorerResourceIsFolder || explorerResourceIsFile",
+        "group": "2_copy"
+      },
+      {
+        "command": "file-tree-json.generateDetailed",
+        "when": "explorerResourceIsFolder || explorerResourceIsFile",
+        "group": "2_copy"
+      }
+    ]
+  }
+}
+,
   "scripts": {
     "compile": "node esbuild.js",
     "watch": "npm-run-all -p watch:*",

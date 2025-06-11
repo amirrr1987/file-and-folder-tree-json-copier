@@ -1,32 +1,68 @@
-#file-and-folder-tree-json-copier
+<h1 align="center">📦 File & Folder Tree JSON Copier</h1>
+<p align="center">
+  <strong>Generate and copy your project's directory structure as JSON — directly from VSCode Explorer</strong>
+</p>
 
-Generate and copy your project's directory structure as a clean, easy-to-use JSON — straight from the VSCode explorer!
+<p align="center">
+  <img alt="vscode" src="https://img.shields.io/badge/Made%20for-VSCode-007ACC?logo=visualstudiocode&style=flat-square">
+  <img alt="version" src="https://img.shields.io/vscode-marketplace/v/amirrr1987.file-and-folder-tree-json-copier?style=flat-square">
+  <img alt="installs" src="https://img.shields.io/visual-studio-marketplace/i/amirrr1987.file-and-folder-tree-json-copier?style=flat-square">
+  <img alt="license" src="https://img.shields.io/github/license/amirrr1987/file-and-folder-tree-json-copier?style=flat-square">
+</p>
 
-Ever needed a quick snapshot of your project’s folder and file hierarchy?
-This extension lets you right-click any folder or file in VSCode’s explorer and instantly copy its entire directory tree as JSON to your clipboard. Perfect for documentation, code reviews, or sharing your project structure with teammates.
+---
 
-Features
-📁 Generate JSON representation of folders & files recursively
+## ✨ Features
 
-📋 Copy the JSON output directly to your clipboard
+✅ **Generate JSON structure**  
+Recursively generate JSON representation of files and folders.  
+&nbsp;
 
-🚀 Easy-to-use command available in the explorer context menu
+📋 **Copy to Clipboard**  
+No need to save manually — JSON is instantly copied to your clipboard.  
+&nbsp;
 
-🔧 Works on any folder or file in your workspace
+🖱️ **Context Menu Integration**  
+Right-click in the explorer to use:  
+- `📄 Copy Directory Tree as Simple JSON`  
+- `📚 Copy Directory Tree as Detailed JSON`  
+&nbsp;
 
-How to Use
-Right-click a folder or file in the VSCode explorer
+🧠 **Detailed Metadata** *(for advanced users)*  
+Get line counts, file size, modified dates, function counts, and more in detailed mode.  
+&nbsp;
 
-Select “Copy Directory Tree as JSON”
+🛠️ **Works Everywhere**  
+Works on any file or folder in your workspace.
 
-Paste your JSON wherever you want!
+---
 
-Why You’ll Love It
-Saves time documenting complex projects
+## 🚀 How to Use
 
-Helps visualize folder/file structures quickly
+1. 🖱️ **Right-click** any folder or file in the VSCode Explorer  
+2. ✨ Select one of the commands:  
+   - `Copy Directory Tree as Simple JSON`  
+   - `Copy Directory Tree as Detailed JSON`  
+3. 📋 **Paste** the output wherever you like — docs, Slack, issues, or a JSON file!
 
-Great for sharing with collaborators or tools that accept JSON input
+---
 
-Installation
-Install from the VSCode Marketplace or clone the repo and build locally.
+## 💡 Why You'll Love It
+
+- 🕓 **Save time** documenting large codebases  
+- 🧭 **Quickly understand** unfamiliar repo structures  
+- 🤝 **Share structures** with teammates or in pull requests  
+- ⚙️ **Integrate** with other tools that accept JSON inputs
+
+---
+
+## 📦 Installation
+
+Install directly from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=amirrr1987.file-and-folder-tree-json-copier)  
+or clone and build locally:
+
+```bash
+git clone https://github.com/amirrr1987/file-and-folder-tree-json-copier.git
+cd file-and-folder-tree-json-copier
+npm install
+npm run compile
