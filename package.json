@@ -3,7 +3,7 @@
   "displayName": "File and Folder Tree JSON Copier",
   "publisher": "AmirMaghami",
   "description": "Generate and copy the directory structure of the current project as JSON.",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/amirrr1987/file-and-folder-tree-json-copier.git"
@@ -16,36 +16,37 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:file-tree-json.generateFromExplorer"
+    "onCommand:file-tree-json.copySimple",
+    "onCommand:file-tree-json.copyDetailed"
   ],
   "main": "./dist/extension.js",
-"contributes": {
-  "commands": [
-    {
-      "command": "file-tree-json.generateSimple",
-      "title": "Copy Directory Tree as Simple JSON"
-    },
-    {
-      "command": "file-tree-json.generateDetailed",
-      "title": "Copy Directory Tree as Detailed JSON"
-    }
-  ],
-  "menus": {
-    "explorer/context": [
+  "icon": "assets/logo.png",
+  "contributes": {
+    "commands": [
       {
         "command": "file-tree-json.generateSimple",
-        "when": "explorerResourceIsFolder || explorerResourceIsFile",
-        "group": "2_copy"
+        "title": "Copy Directory Tree as Simple JSON"
       },
       {
         "command": "file-tree-json.generateDetailed",
-        "when": "explorerResourceIsFolder || explorerResourceIsFile",
-        "group": "2_copy"
+        "title": "Copy Directory Tree as Detailed JSON"
       }
-    ]
-  }
-}
-,
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "file-tree-json.generateSimple",
+          "when": "explorerResourceIsFolder || explorerResourceIsFile",
+          "group": "2_copy"
+        },
+        {
+          "command": "file-tree-json.generateDetailed",
+          "when": "explorerResourceIsFolder || explorerResourceIsFile",
+          "group": "2_copy"
+        }
+      ]
+    }
+  },
   "scripts": {
     "compile": "node esbuild.js",
     "watch": "npm-run-all -p watch:*",
@@ -58,5 +59,10 @@
     "esbuild": "^0.25.3",
     "typescript": "^5.8.3",
     "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "istextorbinary": "^9.5.0",
+    "mime-types": "^3.0.1",
+    "simple-git": "^3.28.0"
   }
 }
