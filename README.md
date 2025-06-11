@@ -1,2 +1,3 @@
-# file-and-folder-tree-json-copier
-Generate and copy the directory structure of the current project as JSON.
+# file-tree-json
+
+A VSCode extension to generate a directory structure of the current project as JSON.
