@@ -1,4 +1,4 @@
-#file-and-folder-tree-json-copier
+# file-and-folder-tree-json-copier
 
 Generate and copy your project's directory structure as a clean, easy-to-use JSON — straight from the VSCode explorer!
 
